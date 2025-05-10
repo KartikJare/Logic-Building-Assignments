@@ -1,45 +1,36 @@
-Each problem is implemented in a separate C source file named as per the convention `programAQ1`, `programAQ2`, ..., `programAQ5`, where:
-- `A` stands for Assignment 2
-- `Q1`, `Q2`, etc., refer to the respective question number.
+# C Programming Assignments 2
 
-## Coding Standards
-- Proper indentation and spacing have been followed.
-- Descriptive variable names are used.
-- Each function is written in a modular manner.
-- Comments are added wherever necessary for better understanding.
-- Consistent formatting and naming conventions are maintained throughout the codebase.
+This repository contains a second set of C programs written by Kartik Ganesh Jare. Each program demonstrates fundamental programming concepts and user input handling.
 
----
+## Programs Overview
 
-## Problem Descriptions
+### 1. Printing Asterisks (Version 1)
+- **File:** `programAQ1.c` (Originally `Assigment2Question1.c`)
+- **Description:** Accepts a number from the user and prints that many asterisks (`*`), each on a new line. Handles negative inputs by converting them to positive.
+- **Key Feature:** Uses a `while` loop with input validation.
 
-### programAQ1: Print '*' Character Given Number of Times
-- Accept one number from user and print that number of `*` on screen using a `while` loop.
+### 2. Printing Asterisks (Version 2)
+- **File:** `programAQ2.c` (Originally `Assigment2Question2.c`)
+- **Description:** Similar to Program 1 but decrements the input value directly in the `while` loop instead of using a counter.
+- **Key Feature:** Demonstrates an alternative loop logic.
 
-### programAQ2: Print '*' Character Given Number of Times (Decrement Loop)
-- Accept one number from user and print that number of `*` on screen using a decrementing `while` loop.
+### 3. Conditional Message Printer
+- **File:** `programAQ3.c` (Originally `Assigment2Question3.c`)
+- **Description:** Accepts a number and prints "Hello" if the number is less than 10, otherwise prints "Demo".
+- **Key Feature:** Simple conditional (`if-else`) branching.
 
-### programAQ3: Display "Hello" or "Demo"
-- Accept one number from user.
-- If the number is less than 10, print `"Hello"`.
-- Otherwise, print `"Demo"`.
+### 4. Number Repetition Printer
+- **File:** `programAQ4.c` (Originally `Assigment3Question4.c`)
+- **Description:** Accepts two numbers and prints the first number repeatedly, as many times as the second number specifies. Converts negative frequency to positive.
+- **Key Feature:** Uses a `for` loop with input validation.
 
-### programAQ4: Print First Number, Second Number of Times
-- Accept two numbers from user.
-- Print the first number as many times as the second number indicates.
-- If frequency is negative, treat it as positive.
+### 5. Even-Odd Checker
+- **File:** `programAQ5.c` (Originally `pAssigment2Question5.c`)
+- **Description:** Checks if a user-input number is even or odd using a custom `BOOL` type.
+- **Key Feature:** Demonstrates modular arithmetic and custom type definitions.
 
-### programAQ5: Check Even or Odd
-- Accept a number from user.
-- Check if it is even or odd.
-- Use a `typedef` and `BOOL` return type with `TRUE` and `FALSE` macros.
-
----
-
-## Compilation Commands
-
-Use the following command to compile each file:
-
-```bash
-gcc programAQ1.c -o myexe
-./myexe
+## How to Compile and Run
+1. Ensure you have a C compiler installed (e.g., `gcc`).
+2. Compile each program using:  
+   ```bash
+   gcc <filename.c> -o <outputname>
