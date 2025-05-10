@@ -1,43 +1,36 @@
+# C Programming Assignments
 
-#  Logic Building Assignment : 1 💡
+This repository contains a collection of C programs written by Kartik Ganesh Jare. Each program serves a specific purpose and demonstrates basic programming concepts.
 
-This repository contains five logic-building programs in C. Each file is named using the format `programAQ1.c`.
+## Programs Overview
 
-All programs are implemented with proper *C coding conventions*, including:
-- Clear and meaningful function/variable names
-- Proper use of constants/macros
-- Consistent indentation
+### 1. Division of Two Numbers
+- **File:** `programAQ1.c`
+- **Description:** This program divides two numbers and handles division by zero by returning `-1`.
+- **Usage:** The `Divide` function takes two integers and returns their quotient. If the divisor is zero, it returns `-1`.
 
+### 2. Printing "Marvellous" Five Times
+- **File:** `programAQ2.c`
+- **Description:** This program prints the word "Marvellous" five times on the screen using a loop.
+- **Usage:** The `Display` function is called from `main` to achieve this.
 
----
+### 3. Printing Numbers from 5 to 1
+- **File:** `programAQ3.c`
+- **Description:** This program prints numbers from 5 to 1 in descending order using a `while` loop.
+- **Usage:** The `Diplay` function (note the typo in the function name) is called from `main`.
 
-## 🧩 Problem Statements
+### 4. Divisibility Check by 5
+- **File:** `programAQ4.c`
+- **Description:** This program checks if a given number is divisible by 5 using a custom `BOOL` type.
+- **Usage:** The user inputs a number, and the `Check` function returns `TRUE` (1) if divisible by 5, otherwise `FALSE` (-1).
 
-### programAQ1 - Divide Two Numbers
-Accept two integers and perform division. Handle divide-by-zero cases properly.
+### 5. Printing Asterisks
+- **File:** `programAQ5.c`
+- **Description:** This program prints a specified number of asterisks (`*`), each on a new line.
+- **Usage:** The `Accept` function takes an integer and prints `*` that many times. The default value used is 5.
 
-### programAQ2 - Print "Marvellous" 5 Times
-Display the word **"Marvellous"** five times using a loop.
-
-### programAQ3 - Print Numbers from 5 to 1
-Print numbers from **5 down to 1** using a `while` loop.
-
-### programAQ4 - Check Divisibility by 5
-Check whether a given number is divisible by 5. Return TRUE or FALSE accordingly.
-
-### programAQ5 - Print N Asterisks
-Accept a number from the user and print that many `*` symbols on screen.
-
----
-
-## 🛠 How to Compile & Run
-
-Use the following commands to compile each file with a custom executable name (`myexe`) and then run it:
-
-### 🔧 Compile:
-```bash
-gcc programAQ1.c -o myexe      # For Question 1
-gcc programAQ2.c -o myexe      # For Question 2
-gcc programAQ3.c -o myexe      # For Question 3
-gcc programAQ4.c -o myexe      # For Question 4
-gcc programAQ5.c -o myexe      # For Question 5
+## How to Compile and Run
+1. Ensure you have a C compiler installed (e.g., `gcc`).
+2. Compile each program using the command:  
+   ```bash
+   gcc <filename.c> -o <outputname>
