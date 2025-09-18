@@ -1,0 +1,99 @@
+String Manipulation Programs in C
+
+This repository contains C programs demonstrating various string manipulation operations such as copying, conditional copying, and concatenation.
+
+Programs Overview
+1. programAQ1.c - String Copy
+Description: Accepts a string from the user and copies its contents into another string.
+
+Function: StrCpyX(char *src, char *dest)
+
+Usage:
+
+bash
+./programAQ1
+Enter a string when prompted.
+
+Output: Displays the copied string.
+
+2. programAQ2.c - String Copy with Character Limit
+Description: Accepts a string and a number n from the user, then copies the first n characters into another string.
+
+Function: StrNCpyX(char *src, char *dest, int iCnt)
+
+Usage:
+
+bash
+./programAQ2
+Enter a string and the number of characters to copy when prompted.
+
+Output: Displays the copied substring.
+
+3. programAQ3.c - Copy Capital Characters
+Description: Accepts a string and copies only the capital letters into another string.
+
+Function: StrCpyCap(char *src, char *dest)
+
+Usage:
+
+bash
+./programAQ3
+Enter a string when prompted.
+
+Output: Displays the copied capital letters.
+
+4. programAQ4.c - Copy Small Characters
+Description: Accepts a string and copies only the lowercase letters into another string.
+
+Function: StrCpySmall(char *src, char *dest)
+
+Usage:
+
+bash
+./programAQ4
+Enter a string when prompted.
+
+Output: Displays the copied lowercase letters.
+
+5. programAQ5.c - String Concatenation
+Description: Accepts two strings from the user and concatenates the second string to the end of the first string.
+
+Function: StrCatX(char *src, char *dest)
+
+Usage:
+
+bash
+./programAQ5
+Enter two strings when prompted.
+
+Output: Displays the combined string.
+
+Compilation Instructions
+To compile each program, use the following command (replace programAQX.c with the actual filename):
+
+bash
+gcc programAQX.c -o programAQX
+Execution
+After compilation, run the executable:
+
+bash
+./programAQX
+Important Notes
+Buffer Size: All programs use fixed-size character arrays (30-80 characters). Ensure input strings do not exceed these limits to prevent buffer overflow.
+
+Input Handling:
+
+Programs use scanf("%[^\n]s", arr) to read entire lines including spaces
+
+programAQ5.c uses getchar() to consume the newline character between inputs
+
+Safety Considerations:
+
+Programs include NULL pointer checks
+
+All destination strings are properly null-terminated
+
+Basic input validation is implemented
+
+Author
+Kartik Ganesh Jare
