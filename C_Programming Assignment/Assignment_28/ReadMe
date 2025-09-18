@@ -1,0 +1,66 @@
+File Operations in C
+This repository contains C programs demonstrating basic file operations such as opening, creating, reading, writing, and appending to files.
+
+Programs Overview
+1. programAQ1.c - Open File in Read Mode
+Description: Accepts a filename from the user and opens the file in read-only mode.
+
+Usage:
+
+bash
+./programAQ1
+Enter the filename when prompted.
+
+Output: Displays whether the file was opened successfully along with the file descriptor.
+
+2. programAQ2.c - Create a File
+Description: Accepts a filename from the user and creates the file with read, write, and execute permissions for all.
+
+Usage:
+
+bash
+./programAQ2
+Enter the filename when prompted.
+
+Output: Confirms if the file was created successfully along with the file descriptor.
+
+3. programAQ3.c - Read and Display File Contents
+Description: Accepts a filename from the user, reads the entire content of the file, and displays it on the screen.
+
+Usage:
+
+bash
+./programAQ3
+Enter the filename when prompted.
+
+Output: Shows the file contents if opened successfully.
+
+4. programAQ4.c - Display File Size
+Description: Accepts a filename from the user and displays the size of the file in bytes.
+
+Note: The implementation for this program is not provided in the repository. You may need to implement it using stat system call or by reading the file and counting bytes.
+
+5. programAQ5.c - Append String to File
+Description: Accepts a filename and appends the string "Hello World" to the end of the file.
+
+Usage:
+
+bash
+./programAQ5
+Enter the filename when prompted.
+
+Output: Confirms the number of bytes written successfully.
+
+Compilation Instructions
+To compile each program, use the following command (replace programAQX.c with the actual filename):
+
+bash
+gcc programAQX.c -o programAQX
+Execution
+After compilation, run the executable:
+
+bash
+./programAQX
+
+Author
+Kartik Ganesh Jare
