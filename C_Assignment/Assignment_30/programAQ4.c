@@ -1,0 +1,55 @@
+///////////////////////////////////////////////////////////
+//
+//  File name : Assignement30Question4.c
+//  Description : Write a program which checks whether 7th & 8th & 9th bit is On or
+//                OFF
+//  Author : Kartik Ganesh Jare
+//  Date : 13/6/25
+//  
+///////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+typedef int BOOL;
+typedef unsigned int UINT;
+
+#define TRUE 1
+#define FALSE 0
+
+BOOL ChkBit(UINT iNo)
+{
+    UINT iMask = 0;
+
+    iMask = (1 << 6) | (1 << 7) | (1 << 8);
+
+    if((iNo & iMask) == iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
+int main()
+{
+    UINT iValue = 0;
+    BOOL bRet = FALSE;
+
+    printf("Enter number: \n");
+    scanf("%u",&iValue);
+
+    bRet = ChkBit(iValue);
+
+    if(bRet == TRUE)
+    {
+        printf("7th,8th,9th bits is On\n");
+    }
+    else
+    {
+        printf("7th,8th,9th bits is Off\n");
+    }
+    
+    return 0;
+}
