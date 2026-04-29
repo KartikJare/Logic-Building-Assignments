@@ -1,0 +1,177 @@
+///////////////////////////////////////////////////////////
+//
+//  File name : Assignement51Question4.java
+//  Description : Write a java program which accept matrix from user and trace and
+//                normal of given matrix.Here trace of the matrix is the sum of the
+//                elements of the main diagonal i.e the diagonal from the upper left to
+//                the lower right of a matrix. Normal of the matrix is the square root of
+//                the sum of all the elements.
+//  Author : Kartik Ganesh Jare
+//  Date : 13/11/25
+//  
+///////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+class Matrix
+{
+    private int Arr[][];
+
+    public Matrix(int A,int B)
+    {
+        Arr = new int [A][B];
+    }
+
+    public void Accept()
+    {
+        System.out.println("Please enter the elements of matrix");
+
+        Scanner sobj = new Scanner(System.in);
+
+        int i = 0, j = 0;
+
+        for(i = 0;i < Arr.length;i++)
+        {
+            for(j = 0; j< Arr[i].length;j++)
+            {
+                Arr[i][j] = sobj.nextInt();
+            }
+        }
+    }
+
+    public void Display()
+    {
+        System.out.println("Elements of the matrix are : ");
+
+        int i = 0, j = 0;
+
+        for(i = 0;i < Arr.length;i++)
+        {
+            for(j = 0; j< Arr[i].length;j++)
+            {
+                System.out.print(Arr[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public void SwapRows()
+    {
+        int j = 0 ,i = 0, temp = 0;
+
+        for(i = 0;i < Arr.length - 1;i+=2)
+        {   
+            for(j = 0;j < Arr[i].length;j++)
+            {
+                temp = Arr[i][j];
+                Arr[i][j] = Arr[i + 1][j];
+                Arr[i + 1][j] = temp;
+            }
+        }
+    } 
+
+    public void SwapColumns()
+    {
+        int j = 0 ,i = 0, temp = 0;
+
+        for(j = 0;j < Arr[0].length - 1;j+=2)
+        {   
+            for(i = 0;i < Arr.length;i++)
+            {
+                temp = Arr[i][j];
+                Arr[i][j] = Arr[i][j + 1];
+                Arr[i][j + 1] = temp;
+            }
+        }
+    } 
+
+    public int[][] Transpose()
+    {
+        int i = 0, j = 0;
+
+        int Trans[][] = new int[Arr[0].length][Arr.length];
+
+        for(i = 0; i < Arr.length; i++)
+        {
+            for(j = 0; j < Arr[i].length; j++)
+            {
+                Trans[j][i] = Arr[i][j];
+            }
+        }
+
+        return Trans;
+    }
+
+    public void DisplayTranspose(int Brr[][])
+    {
+        System.out.println("Transpose Matrix : ");
+
+        int i = 0, j = 0;
+
+        for(i = 0; i < Brr.length; i++)
+        {
+            for(j = 0; j < Brr[i].length; j++)
+            {
+                System.out.print(Brr[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public int Trace()
+    {
+        int i = 0,iSum = 0;
+
+        for(i = 0; i < Arr.length;i++)
+        {
+            iSum = iSum + Arr[i][i];
+        }
+        
+        return iSum;
+    }
+
+    public double Normal()
+    {
+        int i = 0,j = 0,iSum = 0;
+
+        for(i = 0;i < Arr.length;i++)
+        {
+            for(j = 0;j < Arr[i].length;j++)
+            {
+                iSum = iSum + (Arr[i][j] * Arr[i][j]);
+            }
+        }
+
+        return Math.sqrt(iSum);
+    }
+
+}
+
+public class programAQ4
+{
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter number of rows : ");
+        int iRow = sobj.nextInt();
+
+        System.out.println("Enter number of colums : ");
+        int iCol = sobj.nextInt();
+
+        Matrix mobj = new Matrix(iRow,iCol);
+
+        mobj.Accept();
+
+        System.out.println("\nOriginal Matrix:");
+        mobj.Display();
+
+        int iRet = mobj.Trace();
+        double dRet = mobj.Normal();
+
+        System.out.println("Trace of matrix is : " + iRet);
+        System.out.println("Normal of matrix is : " + dRet);
+
+        sobj.close();
+    }   
+}
